@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aşırı Düşük | İhale Danışmanlığı ve Çözüm Merkezi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, accent: { 500: '#f59e0b', 600: '#d97706' } } } }
+        }
+    </script>
+    <style>
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(90deg, #1d4ed8, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .ai-pulse { animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); } 50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); } }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+                    <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">A↓</div>
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">Aşırı<span class="text-primary-600">Düşük</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" onclick="showPage('home')" id="nav-home" class="nav-link text-primary-600 font-medium transition-colors">Ana Sayfa</a>
+                    <a href="#" onclick="showPage('hakkimizda')" id="nav-hakkimizda" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hakkımızda</a>
+                    <a href="#" onclick="showPage('hizmetler')" id="nav-hizmetler" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hizmetlerimiz</a>
+                    <a href="#" onclick="showPage('yapay-zeka')" id="nav-yapay-zeka" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Yapay Zeka</a>
+                    <a href="#" onclick="showPage('iletisim')" id="nav-iletisim" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">İletişim</a>
+                    <a href="#" onclick="showPage('basvuru')" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Hemen Başvur</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="page-section pt-32 pb-20 bg-white min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-extrabold mb-6">Aşırı Düşük Teklif Çözümleri</h1>
+            <p class="text-xl text-gray-600 mb-10">İhale süreçlerinizde yapay zeka destekli profesyonel danışmanlık.</p>
+            <button onclick="showPage('basvuru')" class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Hizmet Başvurusu Yap</button>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="page-section hidden pt-32 pb-20 bg-gray-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Hakkımızda</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto">Uzman kadromuzla, KİK mevzuatına tam uyumlu savunmalar üretiyoruz.</p>
+        </div>
+    </section>
+
+    <section id="hizmetler" class="page-section hidden pt-32 pb-20 bg-white min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Hizmetlerimiz</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="border p-6 rounded-2xl shadow-sm hover:shadow-md">Aşırı Düşük Savunması</div>
+                <div class="border p-6 rounded-2xl shadow-sm hover:shadow-md">Maliyet Tespit</div>
+                <div class="border p-6 rounded-2xl shadow-sm hover:shadow-md">Ön İnceleme</div>
+                <div class="border p-6 rounded-2xl shadow-sm hover:shadow-md">İtirazen Şikayet</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="yapay-zeka" class="page-section hidden pt-32 pb-20 bg-gray-900 text-white min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-10 text-center">AI Risk Analizi</h2>
+            <div class="bg-gray-800 p-8 rounded-2xl max-w-2xl mx-auto">
+                <input type="number" id="calcMaliyet" class="w-full p-3 mb-4 rounded bg-gray-900 border text-white" placeholder="Yaklaşık Maliyet">
+                <input type="number" id="calcTeklif" class="w-full p-3 mb-4 rounded bg-gray-900 border text-white" placeholder="Teklifiniz">
+                <button onclick="calculateAI()" class="w-full bg-blue-600 py-3 rounded font-bold text-white">Analiz Et</button>
+                <div id="aiResult" class="hidden mt-6 p-4 bg-black rounded"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="basvuru" class="page-section hidden pt-32 pb-20 bg-gray-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border flex items-center gap-5">
+                        <i class="fas fa-phone-alt text-green-600 text-2xl"></i>
+                        <div><p class="text-xs text-gray-400">Telefon</p><h4 class="font-bold">0539 730 83 32</h4></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border flex items-center gap-5">
+                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl"></i>
+                        <div><p class="text-xs text-gray-400">Adres</p><h4 class="font-bold">Mutlukent Mah. Çankaya / Ankara</h4></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border flex items-center gap-5">
+                        <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+                        <div><p class="text-xs text-gray-400">E-Posta</p><h4 class="font-bold">iletisim@asiridusuk.com</h4></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6">Hemen Başvur</h3>
+                    <form class="space-y-4">
+                        <input type="text" class="w-full border p-3 rounded" placeholder="Ad Soyad">
+                        <input type="file" class="w-full border p-3 rounded">
+                        <button type="button" onclick="submitForm()" class="w-full bg-blue-600 text-white py-3 rounded">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="page-section hidden pt-32 pb-20 bg-gray-900 text-white min-h-screen text-center">
+         <h2 class="text-3xl font-bold">İletişim Bilgileri</h2>
+         <p class="mt-4">Mutlukent Mah. Çankaya / Ankara | 0539 730 83 32</p>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.add('hidden'));
+            const target = document.getElementById(pageId);
+            if(target) target.classList.remove('hidden');
+        }
+        function calculateAI() {
+            const m = document.getElementById('calcMaliyet').value;
+            const t = document.getElementById('calcTeklif').value;
+            const res = document.getElementById('aiResult');
+            if(!m || !t) return;
+            res.classList.remove('hidden');
+            res.innerHTML = `<span class='font-bold text-lg'>Risk Seviyesi: ${t/m > 0.8 ? 'Düşük' : 'Yüksek'}</span>`;
+        }
+        function submitForm() {
+            alert('Talebiniz alınmıştır!');
+        }
+    </script>
+</body>
+</html>
