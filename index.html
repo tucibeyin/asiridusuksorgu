@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aşırı Düşük | İhale Danışmanlığı ve Çözüm Merkezi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -13,35 +15,70 @@
         }
     </script>
     <style>
-        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(90deg, #1d4ed8, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .ai-pulse { animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); } 50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); } }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ai-pulse {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+            }
+        }
     </style>
 </head>
+
 <body class="font-sans text-gray-800 antialiased bg-gray-50">
 
     <nav class="fixed w-full z-50 glass-effect border-b border-gray-200 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
-                    <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">A↓</div>
-                    <span class="font-bold text-2xl tracking-tight text-gray-900">Aşırı<span class="text-primary-600">Düşük</span></span>
+                    <div
+                        class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        A↓</div>
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">Aşırı<span
+                            class="text-primary-600">Düşük</span></span>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#" onclick="showPage('home')" id="nav-home" class="nav-link text-primary-600 font-medium transition-colors">Ana Sayfa</a>
-                    <a href="#" onclick="showPage('hakkimizda')" id="nav-hakkimizda" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hakkımızda</a>
-                    <a href="#" onclick="showPage('hizmetler')" id="nav-hizmetler" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hizmetlerimiz</a>
-                    <a href="#" onclick="showPage('yapay-zeka')" id="nav-yapay-zeka" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Yapay Zeka</a>
-                    <a href="#" onclick="showPage('iletisim')" id="nav-iletisim" class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">İletişim</a>
-                    <a href="#" onclick="showPage('basvuru')" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Hemen Başvur</a>
+                    <a href="#" onclick="showPage('home')" id="nav-home"
+                        class="nav-link text-primary-600 font-medium transition-colors">Ana Sayfa</a>
+                    <a href="#" onclick="showPage('hakkimizda')" id="nav-hakkimizda"
+                        class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hakkımızda</a>
+                    <a href="#" onclick="showPage('hizmetler')" id="nav-hizmetler"
+                        class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Hizmetlerimiz</a>
+                    <a href="#" onclick="showPage('yapay-zeka')" id="nav-yapay-zeka"
+                        class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">Yapay
+                        Zeka</a>
+                    <a href="#" onclick="showPage('iletisim')" id="nav-iletisim"
+                        class="nav-link text-gray-600 hover:text-primary-600 font-medium transition-colors">İletişim</a>
+                    <a href="#" onclick="showPage('basvuru')"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-lg">Hemen
+                        Başvur</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none p-2" onclick="toggleMobileMenu()">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-600 focus:outline-none p-2"
+                        onclick="toggleMobileMenu()">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -49,15 +86,24 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0">
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0">
             <div class="px-4 pt-4 pb-8 space-y-3 flex flex-col max-h-[calc(100vh-5rem)] overflow-y-auto">
-                <a href="#" onclick="showPage('home'); toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-lg font-medium text-primary-600 bg-primary-50">Ana Sayfa</a>
-                <a href="#" onclick="showPage('hakkimizda'); toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Hakkımızda</a>
-                <a href="#" onclick="showPage('hizmetler'); toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Hizmetlerimiz</a>
-                <a href="#" onclick="showPage('yapay-zeka'); toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Yapay Zeka</a>
-                <a href="#" onclick="showPage('iletisim'); toggleMobileMenu()" class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">İletişim</a>
+                <a href="#" onclick="showPage('home'); toggleMobileMenu()"
+                    class="block px-4 py-3 rounded-xl text-lg font-medium text-primary-600 bg-primary-50">Ana Sayfa</a>
+                <a href="#" onclick="showPage('hakkimizda'); toggleMobileMenu()"
+                    class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Hakkımızda</a>
+                <a href="#" onclick="showPage('hizmetler'); toggleMobileMenu()"
+                    class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Hizmetlerimiz</a>
+                <a href="#" onclick="showPage('yapay-zeka'); toggleMobileMenu()"
+                    class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">Yapay
+                    Zeka</a>
+                <a href="#" onclick="showPage('iletisim'); toggleMobileMenu()"
+                    class="block px-4 py-3 rounded-xl text-lg font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-600">İletişim</a>
                 <div class="pt-4 pb-2">
-                    <a href="#" onclick="showPage('basvuru'); toggleMobileMenu()" class="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-4 rounded-xl font-bold transition-colors shadow-md">Hemen Başvur</a>
+                    <a href="#" onclick="showPage('basvuru'); toggleMobileMenu()"
+                        class="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white px-6 py-4 rounded-xl font-bold transition-colors shadow-md">Hemen
+                        Başvur</a>
                 </div>
             </div>
         </div>
@@ -65,16 +111,21 @@
 
     <section id="home" class="page-section pt-32 pb-20 bg-white min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center flex flex-col justify-center h-full">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">Aşırı Düşük <br class="md:hidden" /> Teklif Çözümleri</h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-10 px-2 max-w-2xl mx-auto">İhale süreçlerinizde yapay zeka destekli profesyonel danışmanlık.</p>
-            <button onclick="showPage('basvuru')" class="bg-primary-600 text-white px-8 py-4 md:py-3 rounded-full font-bold w-full sm:w-auto mx-auto shadow-lg hover:shadow-xl hover:bg-primary-700 transition-all">Hizmet Başvurusu Yap</button>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">Aşırı Düşük <br
+                    class="md:hidden" /> Teklif Çözümleri</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 px-2 max-w-2xl mx-auto">İhale süreçlerinizde yapay zeka
+                destekli profesyonel danışmanlık.</p>
+            <button onclick="showPage('basvuru')"
+                class="bg-primary-600 text-white px-8 py-4 md:py-3 rounded-full font-bold w-full sm:w-auto mx-auto shadow-lg hover:shadow-xl hover:bg-primary-700 transition-all">Hizmet
+                Başvurusu Yap</button>
         </div>
     </section>
 
     <section id="hakkimizda" class="page-section hidden pt-32 pb-20 bg-gray-50 min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">Hakkımızda</h2>
-            <p class="text-center text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">Uzman kadromuzla, KİK mevzuatına tam uyumlu savunmalar üretiyoruz.</p>
+            <p class="text-center text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">Uzman
+                kadromuzla, KİK mevzuatına tam uyumlu savunmalar üretiyoruz.</p>
         </div>
     </section>
 
@@ -82,10 +133,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">Hizmetlerimiz</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">Aşırı Düşük Savunması</div>
-                <div class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">Maliyet Tespit</div>
-                <div class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">Ön İnceleme</div>
-                <div class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">İtirazen Şikayet</div>
+                <div
+                    class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">
+                    Aşırı Düşük Savunması</div>
+                <div
+                    class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">
+                    Maliyet Tespit</div>
+                <div
+                    class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">
+                    Ön İnceleme</div>
+                <div
+                    class="border bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center font-medium flex items-center justify-center min-h-[120px]">
+                    İtirazen Şikayet</div>
             </div>
         </div>
     </section>
@@ -94,10 +153,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-10 text-center">AI Risk Analizi</h2>
             <div class="bg-gray-800 p-6 md:p-8 rounded-3xl max-w-2xl mx-auto shadow-2xl border border-gray-700">
-                <input type="number" id="calcMaliyet" class="w-full p-4 mb-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white transition-colors" placeholder="Yaklaşık Maliyet">
-                <input type="number" id="calcTeklif" class="w-full p-4 mb-6 rounded-xl bg-gray-900 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white transition-colors" placeholder="Teklifiniz">
-                <button onclick="calculateAI()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold text-white transition-colors text-lg shadow-lg">Analiz Et</button>
-                <div id="aiResult" class="hidden mt-6 p-5 bg-gray-900 border border-gray-700 rounded-xl text-center"></div>
+                <input type="number" id="calcMaliyet"
+                    class="w-full p-4 mb-4 rounded-xl bg-gray-900 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white transition-colors"
+                    placeholder="Yaklaşık Maliyet">
+                <input type="number" id="calcTeklif"
+                    class="w-full p-4 mb-6 rounded-xl bg-gray-900 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white transition-colors"
+                    placeholder="Teklifiniz">
+                <button onclick="calculateAI()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold text-white transition-colors text-lg shadow-lg">Analiz
+                    Et</button>
+                <div id="aiResult" class="hidden mt-6 p-5 bg-gray-900 border border-gray-700 rounded-xl text-center">
+                </div>
             </div>
         </div>
     </section>
@@ -107,23 +173,37 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">İletişim ve Başvuru</h2>
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="space-y-4">
-                    <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-phone-alt text-green-600 text-xl"></i>
                         </div>
-                        <div><p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Telefon</p><h4 class="font-bold text-gray-900 md:text-lg">0539 730 83 32</h4></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Telefon</p>
+                            <h4 class="font-bold text-gray-900 md:text-lg">0539 730 83 32</h4>
+                        </div>
                     </div>
-                    <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
+                    <div
+                        class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
                         </div>
-                        <div><p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Adres</p><h4 class="font-bold text-gray-900 md:text-lg leading-tight">Mutlukent Mah. Çankaya / Ankara</h4></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Adres</p>
+                            <h4 class="font-bold text-gray-900 md:text-lg leading-tight">Koza 1. Cadde No: 153/4 Çankaya
+                                / Ankara</h4>
+                        </div>
                     </div>
-                    <div class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 bg-primary-50 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="bg-white p-5 md:p-6 rounded-2xl shadow-sm border flex items-center gap-4 md:gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-primary-50 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-envelope text-primary-600 text-xl"></i>
                         </div>
-                        <div><p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">E-Posta</p><h4 class="font-bold text-gray-900 md:text-lg">iletisim@asiridusuk.com</h4></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">E-Posta</p>
+                            <h4 class="font-bold text-gray-900 md:text-lg">iletisim@asiridusuk.com</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100">
@@ -131,54 +211,63 @@
                     <form class="space-y-5">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Ad Soyad</label>
-                            <input type="text" class="w-full border border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none p-4 rounded-xl transition-colors" placeholder="Adınız Soyadınız">
+                            <input type="text"
+                                class="w-full border border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none p-4 rounded-xl transition-colors"
+                                placeholder="Adınız Soyadınız">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Döküman Ekle</label>
-                            <input type="file" class="w-full border border-gray-300 focus:border-primary-500 outline-none p-3.5 rounded-xl transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100 cursor-pointer text-gray-500">
+                            <input type="file"
+                                class="w-full border border-gray-300 focus:border-primary-500 outline-none p-3.5 rounded-xl transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100 cursor-pointer text-gray-500">
                         </div>
-                        <button type="button" onclick="submitForm()" class="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all mt-4">Talebi Gönder</button>
+                        <button type="button" onclick="submitForm()"
+                            class="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all mt-4">Talebi
+                            Gönder</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="iletisim" class="page-section hidden pt-32 pb-20 bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
-         <div class="text-center px-4">
-             <i class="fas fa-map-marked-alt text-6xl text-primary-500 mb-6"></i>
-             <h2 class="text-3xl md:text-5xl font-bold mb-6">İletişim Bilgileri</h2>
-             <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto leading-relaxed">Mutlukent Mah. Çankaya / Ankara<br><span class="text-primary-400 font-bold mt-2 inline-block">0539 730 83 32</span></p>
-             <button onclick="showPage('basvuru')" class="mt-10 bg-white text-gray-900 px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:bg-gray-100 transition-all">Bize Ulaşın</button>
-         </div>
+    <section id="iletisim"
+        class="page-section hidden pt-32 pb-20 bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
+        <div class="text-center px-4">
+            <i class="fas fa-map-marked-alt text-6xl text-primary-500 mb-6"></i>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">İletişim Bilgileri</h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto leading-relaxed">Mutlukent Mah. Çankaya /
+                Ankara<br><span class="text-primary-400 font-bold mt-2 inline-block">0539 730 83 32</span></p>
+            <button onclick="showPage('basvuru')"
+                class="mt-10 bg-white text-gray-900 px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:bg-gray-100 transition-all">Bize
+                Ulaşın</button>
+        </div>
     </section>
 
     <script>
         function showPage(pageId) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.add('hidden'));
             const target = document.getElementById(pageId);
-            if(target) {
+            if (target) {
                 target.classList.remove('hidden');
-                window.scrollTo({top: 0, behavior: 'smooth'});
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-            
+
             // Highlight active menu item
             document.querySelectorAll('.nav-link').forEach(l => {
                 l.classList.remove('text-primary-600', 'font-semibold');
                 l.classList.add('text-gray-600');
             });
             const activeLink = document.getElementById('nav-' + pageId);
-            if(activeLink) {
+            if (activeLink) {
                 activeLink.classList.remove('text-gray-600');
                 activeLink.classList.add('text-primary-600', 'font-semibold');
             }
         }
-        
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.querySelector('#mobile-menu-btn i');
             menu.classList.toggle('hidden');
-            if(menu.classList.contains('hidden')) {
+            if (menu.classList.contains('hidden')) {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             } else {
@@ -191,12 +280,12 @@
             const m = document.getElementById('calcMaliyet').value;
             const t = document.getElementById('calcTeklif').value;
             const res = document.getElementById('aiResult');
-            if(!m || !t) return;
+            if (!m || !t) return;
             res.classList.remove('hidden');
             const ratio = t / m;
             let level = 'Yüksek';
             let color = 'text-red-400';
-            
+
             if (ratio > 0.8) {
                 level = 'Düşük';
                 color = 'text-green-400';
@@ -204,7 +293,7 @@
                 level = 'Orta';
                 color = 'text-yellow-400';
             }
-            
+
             res.innerHTML = `<span class='font-medium text-lg text-gray-200'>Risk Seviyesi:</span> <span class='font-bold text-xl ml-2 ${color}'>${level}</span>`;
         }
 
@@ -213,4 +302,5 @@
         }
     </script>
 </body>
+
 </html>
